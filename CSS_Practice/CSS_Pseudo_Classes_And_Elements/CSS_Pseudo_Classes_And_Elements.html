@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .button:hover{
+            background-color: red;
+        }
+
+        .button:focus{
+            background-color: green;
+        }
+
+        .button:active{
+            background-color: blue;
+        }
+
+        li{
+            color: red;
+        }
+
+        li:nth-child(even){
+            color: green;
+        }
+
+        li:nth-child(3n){
+            background-color: blue;
+        }
+
+        .class::before{
+            content: '*';
+            color: brown;
+        }
+
+        .class::after{
+            content: '#';
+            color: grey;
+        }
+
+        .p1::first-letter{
+            color: red;
+        }
+
+        .p2::first-line{
+            color: green;
+        }
+
+        .p3::selection{
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <button class="button">Button</button>
+    <a href="" class="button">Link</a>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+        <li>Item 6</li>
+    </ul>
+    <h1 class="class">Kethe Mukesh</h1>
+    <p class="p1">Kethe <br> Mukesh</p>
+    <p class="p2">Mukesh <br> Kethe</p>
+    <p class="p3">Kethe <br> Mukesh</p>
+</body>
+</html>

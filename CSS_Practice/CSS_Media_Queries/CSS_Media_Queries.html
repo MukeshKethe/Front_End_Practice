@@ -5,19 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        h1, p{
+        h1{
             background-color: red;
         }
 
         @media (min-width: 600px){
-        h1, p{
+        h1{
             background-color: green;
         }
         }
 
         @media (min-width: 900px){
-        h1, p{
+        h1{
             background-color: blue;
+        }
+        }
+
+        @media (orientation: portrait){
+        p{
+            background-color: violet;
+        }
+        }
+
+        @media (orientation: landscape){
+        p{
+            background-color: brown;
         }
         }
     </style>

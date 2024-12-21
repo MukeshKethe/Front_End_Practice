@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const myPromise = new Promise((resolve, reject) => {
+            let ans = Math.random();
+            console.log(ans);
+            if (ans > 0.5) { 
+                resolve("Promise Fulfilled After 2 Seconds");
+            } else {
+                reject("Promise Rejected After 2 Seconds");
+            }
+        });
+myPromise
+    .then((message) => {
+        console.log(message + " Yes");
+    })
+    .catch((error) => {
+        console.log(error + " No");
+    })
+    </script>
+</body>
+</html>

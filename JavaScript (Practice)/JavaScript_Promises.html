@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Example - 1
+        const myPromise1 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve("Promise1 Fulfilled After 2 Seconds")
+            }, 2000);
+        });
+        myPromise1
+        .then((message) => {
+            console.log(message + " Yes");
+        })
+        .catch((error) => {
+            console.log(error + " No");
+        });
+
+        // Example - 2
+        const myPromise2 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve("Promise2 Fulfilled After 2 Seconds")
+            }, 2000);
+        });
+        myPromise2
+        .then((message) => {
+            console.log(message + " Then1");
+        })
+        .catch((error) => {
+            console.log(error + " No");
+        });
+    </script>
+</body>
+</html>

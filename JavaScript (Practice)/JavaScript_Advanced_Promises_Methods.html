@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Promise.all()
+        console.log("Promise.all() - Success")
+        const myPromise1 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve("First")
+            }, 1000);
+        });
+        const myPromise2 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve("Second")
+            }, 2000);
+        });
+        const myPromise3 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve("Third")
+            }, 3000);
+        });
+
+        Promise.all([myPromise1, myPromise2, myPromise3])
+        .then((results) => {
+            console.log(results);
+        })
+        .catch((error) => {
+            console.log(error);
+        });
+
+        console.log("Promise.all() - Failure")
+        const myPromise4 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve("First")
+            }, 1000);
+        });
+        const myPromise5 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+
+                resolve("Second")
+            }, 2000);
+        });
+        const myPromise6 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                reject("Third")
+            }, 3000);
+        });
+
+        Promise.all([myPromise4, myPromise5, myPromise6])
+        .then((results) => {
+            console.log(results);
+        })
+        .catch((error) => {
+            console.log(error);
+        });
+
+        // Promise.allSettled()
+        console.log("Promise.allSettled() - Success")
+        const myPromise7 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve("First")
+            }, 1000);
+        });
+        const myPromise8 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve("Second")
+            }, 2000);
+        });
+        const myPromise9 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve("Third")
+            }, 3000);
+        });
+
+        Promise.allSettled([myPromise7, myPromise8, myPromise9])
+        .then((results) => {
+            console.log(results);
+        })
+        .catch((error) => {
+            console.log(error);
+        });
+
+        console.log("Promise.allSettled() - Failure")
+        const myPromise10 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve("First")
+            }, 1000);
+        });
+        const myPromise11 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+
+                resolve("Second")
+            }, 2000);
+        });
+        const myPromise12 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                reject("Third")
+            }, 3000);
+        });
+
+        Promise.allSettled([myPromise10, myPromise11, myPromise12])
+        .then((results) => {
+            console.log(results);
+        })
+        .catch((error) => {
+            console.log(error);
+        });
+
+        // Promise.any()
+         console.log("Promise.any() - Success")
+        const myPromise13 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve("First")
+            }, 1000);
+        });
+        const myPromise14 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve("Second")
+            }, 2000);
+        });
+        const myPromise15 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve("Third")
+            }, 3000);
+        });
+
+        Promise.any([myPromise13, myPromise14, myPromise15])
+        .then((results) => {
+            console.log(results);
+        })
+        .catch((error) => {
+            console.log(error);
+        });
+
+        console.log("Promise.any() - Failure")
+        const myPromise16 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                reject("First")
+            }, 1000);
+        });
+        const myPromise17 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+
+                resolve("Second")
+            }, 2000);
+        });
+        const myPromise18 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                reject("Third")
+            }, 3000);
+        });
+
+        Promise.any([myPromise16, myPromise17, myPromise18])
+        .then((results) => {
+            console.log(results);
+        })
+        .catch((error) => {
+            console.log(error);
+        });
+
+        // Promise.race()
+        console.log("Promise.race() - Success")
+        const myPromise19 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve("First")
+            }, 1000);
+        });
+        const myPromise20 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve("Second")
+            }, 2000);
+        });
+        const myPromise21 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve("Third")
+            }, 3000);
+        });
+
+        Promise.race([myPromise19, myPromise20, myPromise21])
+        .then((results) => {
+            console.log(results);
+        })
+        .catch((error) => {
+            console.log(error);
+        });
+
+        console.log("Promise.race() - Failure")
+        const myPromise22 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                reject("First")
+            }, 1000);
+        });
+        const myPromise23 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+
+                resolve("Second")
+            }, 2000);
+        });
+        const myPromise24 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                reject("Third")
+            }, 3000);
+        });
+
+        Promise.race([myPromise22, myPromise23, myPromise24])
+        .then((results) => {
+            console.log(results);
+        })
+        .catch((error) => {
+            console.log(error);
+        });
+    </script>
+</body>
+</html>
